@@ -1,0 +1,32 @@
+.p{
+    width: 30%;
+    height: 30vh;
+    margin: 20px 10px;
+    border: 2px solid yellow;
+    border-radius: 10px 10px;
+    overflow: hidden;
+}
+.p-browser{
+    height: 20px;
+    background-color: #Ccd7da;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+}
+.p-circle{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: beige;
+    margin: 3px;
+}
+.p-image{
+    width: 100%;
+    transition: all 10sec ease;
+    
+}
+p:hover .p-img{
+    transform: translateY(-100%) ;
+
+} /*crome full page extension for full screen images*/

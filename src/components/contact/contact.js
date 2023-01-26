@@ -1,21 +1,21 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import "./contact.css"
 import Phone from"./phone.png"
 import Email from "./gmail.png"
 import Address from "./home-address.png"
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 const contact = () => {
-    const formRef =useRef()
+    // const formRef =useRef()
 
-    const handlesubmit =(e)=>{
-        e.preventDefault();
-    }
+    // const handlesubmit =(e)=>{
+    //     e.preventDefault();
+    // }
   return (
    <div className="c">
     <div className="c-bg"></div>
     <div className="c-wraper">
-        <div className="c-left">
+        <div className="c-left ">
             <h1 className="c-title">
                 Hey Let's Chat Now!!!
             </h1>
@@ -42,7 +42,7 @@ const contact = () => {
             <p className="c-desc">
                 <b>What is Your Story ?</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat accusantium voluptates beatae, placeat ipsa tempore consectetur amet incidunt aliquam, numquam doloribus dolores nisi hic error cumque vitae optio harum.
             </p>
-            <form ref={formRef} onSubmit={handlesubmit} >
+            <form >
 
             <input type="text" placeholder="Name" name="user_name" />
             <input type="text" placeholder="Subject" name="user_subject" />
@@ -57,3 +57,7 @@ const contact = () => {
 }
 
 export default contact
+
+
+// ref={formRef} onSubmit={handlesubmit} inside form for email
+//upar hook use reference

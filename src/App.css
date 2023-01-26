@@ -10,6 +10,7 @@
 }
 .navbar{
   z-index: 1;
+	position: sticky;
 }
 .logo{
   width: 10.25rem;
@@ -102,70 +103,174 @@ nav ul li{
 }
 /*********about****/
 
-.about_container{
-  display: grid;
-  grid-template-columns: 35% 50%;
-  gap: 15%;
+.about{
+  padding: 6rem 3rem 5rem 3rem;
+  background: #f8f8f8;
 }
-.about_me{
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 2rem;
-  background: linear-gradient(45deg,transparent,var(--primary-white),transparent);
-  display: grid;
-  place-items: center;
-  margin-top: 18px;
+.row{
+  display: flex;
+  justify-content: space-around;
 }
-.about_me-image{
-  border-radius: 2rem;
-  overflow:hidden;
-  transform: rotate(10deg);
+.row .column{
+  width: 40%;
 }
-.about_me-image:hover{
-  transform: rotate(0);
+.column .tabs{
+  display: flex;   
 }
-.my-profile{
-  width: 100%;
-  height: 90%;
+.single-tab{
+  background: white;
+  margin-right: 10px;
+  cursor: pointer;
 }
-
-h2 {
-  text-align: center;
-  /* border-bottom: 0.1875rem solid var(--primary-silver); */
+.single-tab h2{
+  display:block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  color: #191717;
+  font-size: 14px;
+  font-weight: 600;
 }
-h5{
-  text-align: center;
-}
-
-.about-background {
+.about-img{
   position: relative;
-  background: url(aboutbackground.jpg) no-repeat;
+  background-image: url(C:\Users\HP\OneDrive\Desktop\react_learning\src\components\my-profile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 550px;
+  width: 100%;
+}
+.content{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: none;
+}
+
+
+.active-content{
+  display: block;
+}
+.active-tab{
+  background: #18dcff;
+  position: relative;
+}
+.active-tab::before{
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #18dcff transparent transparent transparent;
+}
+.active-tab h2{
+  color: rgb(13, 13, 13);
+}
+.content h2{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.content p{
+  padding-bottom: 1rem;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+.content h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+/* Skills CSS */
+.skills-row{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.skills-column{
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+.progress-wrap h3{
+  font-size: 14px !important;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.progress{
+  height: 8px;
+  background: rgba(0,0,0,.05);
+  overflow: visible;
+}
+.progress-bar{
+  width: 80%;
+  height: 8px;
+  background: #18dcff;
+  line-height: 1.2;
+  position: relative;
+  border-radius: 2px;
+}
+.progress-bar span{
+  position: absolute;
+  top: -30px;
+  right: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #18dcff;
+}
+.PhotoShop{
+  width: 88%;
+}
+.Javascript{
+  width: 85%;
+}
+.Designer{
+  width: 90%;
+}
+/* Experience CSS */
+.exp-column h3{
+  margin-bottom: 10px;
+}
+.exp-column span{
+  font-weight: 500;
+  color: #18dcff;
+}
+.exp-column p{
+ margin-top: 10px;
+}
+@media screen and (max-width:768px) {
+  .about{
+      padding: 2rem 1rem 3rem 1rem;
+  }
+  .row{
+      display: flex;
+      flex-direction: column;
+  }
+  .about-img{
+      height: 500px;
+  }
+  .row .column{
+      width: 100%;  
+  }
+  .tabs{
+      padding-top: 3rem;
+  }
+  .skills-row{
+      grid-template-columns: 1fr;
+  }
+}
+.about{
+  position: relative;
+  background: url(C:\Users\HP\OneDrive\Desktop\react_learning\src\aboutbackground.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  color: #fff;
+  color: rgb(9, 9, 9);
 }
-.about_cards{
-  display: grid;
-  grid-template-areas: repeat(3,2fr);
-  gap: 1rem;
-}
-.about_card{
-  background: var(--primary-white);
-  color: #363636;
-  border: 1px solid transparent;
-  border-radius: 2rem;
-  text-align: center;
-  transition: var(--primary-white);
-}
-.about_cards:hover{
-  background: transparent;
-  border-color: var(--primary-silver);
-  cursor: pointer;
 
-}
-.about-content{
-  margin: 2rem 0 2.6rem;
-  padding-top: 2rem;
-  color: var(--primary-white);
-}

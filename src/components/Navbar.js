@@ -1,5 +1,7 @@
 import React from "react"
 import logo from "./f-logo.png";
+// import { Anchor, Row, Col } from 'antd';
+// import { Anchor } from "react-bootstrap";
 
 export default function Navbar() {
   return (
@@ -12,21 +14,26 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-0">
+
             <li className="nav-item active">
-              <a className="nav-link" href="/">Home </a>
+              <a className="nav-link" href="#header">Home</a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#about">About me</a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#portfolio">portfolio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">About me</a>
+              <a className="nav-link" href="#achivements">achivements</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">portfolio</a>
+              <a className="nav-link" href="#contact">contact me</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">achivements</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">contact me</a>
-            </li>
+
+
           </ul>
         </div>
       </div>

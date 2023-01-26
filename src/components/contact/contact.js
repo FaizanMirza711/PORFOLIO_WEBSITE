@@ -12,7 +12,7 @@ const contact = () => {
     //     e.preventDefault();
     // }
   return (
-   <div className="c">
+   <div id="contact" className="c">
     <div className="c-bg"></div>
     <div className="c-wraper">
         <div className="c-left ">

@@ -5,6 +5,7 @@ import { useCallback } from "react";
 import { loadFull } from "tsparticles";
 
 
+
 const Header = () => {
   const particlesInit = useCallback(async engine => {
     console.log(engine);
@@ -18,7 +19,7 @@ const particlesLoaded = useCallback(async container => {
     await console.log(container);
 }, []);
   return (
-    <div className="header-wrapper">
+    <div id="header" className="header-wrapper">
        <Particles
             id="tsparticles"
             init={particlesInit}
@@ -93,15 +94,15 @@ const particlesLoaded = useCallback(async container => {
             }}
         />
     <div className="main-info">
-        <h1>WELCOME TO FAIZAN'S PROFILE</h1>
+        <h1>Hello !! Myself Faizan </h1>
     <Typed
     className="typed-text"
-    strings={["Python","Web DEv","React","C/C++"]}
+    strings={["Python","Web DEv","React JS","C/C++"]}
     typeSpeed={40}
     backSpeed={60}
     loop
     />
-    <a href="/"className="btn-main-offer">CONTACT ME</a>
+    <a href="#contact"className="btn-main-offer">CONTACT ME</a>
     </div>
   </div>
   )

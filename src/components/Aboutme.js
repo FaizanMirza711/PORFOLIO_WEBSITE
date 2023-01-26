@@ -7,8 +7,8 @@ const About = () => {
     setToggleTab(index)
   }
   return (
+    <div id="about" className="bg-image">
     <Fragment>
-
       <section className="about">
 
         <div className="row">
@@ -147,6 +147,7 @@ const About = () => {
       </section>
 
     </Fragment>
+    </div>
   )
 }
 

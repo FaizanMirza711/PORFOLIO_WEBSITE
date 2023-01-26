@@ -74,7 +74,7 @@ nav ul li{
   z-index: 1;
 }
 .main-info h1{
-  color: #363636;;
+  color: #ffffff;;
   font-size: 4rem;
 }
 .typed-text{
@@ -84,22 +84,23 @@ nav ul li{
 
 /***header button***/
 .btn-main-offer{
-  border: 1px solid 	#9400D3;
+  border: 1px solid 	#fbfbfb;
   border-radius: 7px;
   padding: 0.625rem 0.75rem 0.75rem 0.75rem;
   color: var(--primary-white);
   margin-top: 2rem;
   text-decoration: none;
   background-color:var(--primary-dark);
-
 }
 
 /****particles**/
 /* .data-generated{
   z-index: 2 !important;
 } */
-.btn-main-offer > a{
-  color: black;
+.btn-main-offer:hover{
+  color: rgb(255, 255, 255);
+  border: 1px solid 	#9400D3;
+  font-weight: 10rem;
 }
 /*********about****/
 
